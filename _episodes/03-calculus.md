@@ -169,6 +169,10 @@ what the equation above does, by dividing $$P($$:cookie,:sunrise:$$)$$ the sum o
 > > {: .output}
 > {: .solution}
 {: .challenge}
+
+### Conditional Independence
+
+FIXME
      
 
 {% include links.md %}
