@@ -44,12 +44,23 @@ how we can describe the uncertainties and the randomness in our observations.
 This tutorial aims to give a short and gentle introduction into Bayesian statistics, one framework
 of statistical inference and decision making that has become increasingly popular in recent years. 
 
+> ## A Quick Census
+>
+> Let's do a quick round-up of everyone's knowledge. Go to this [anonymous survey][survey] and 
+> click the answers that best describe your current state of knowledge. Don't worry, this is for 
+> information only!
+>
+> If you're doing this at home, don't worry about the survey and just continue on! You can read 
+> and skip sections at your leasure.
+>
+{: .challenge}
+
 This tutorial owes a lot to previous Bayesian statistics tutorials at [Astro Hack Week][ahw],
 especially Brendon Brewer's [tutorial][bayes2015] in 2015 and Ruth Angus' [tutorial][bayes2018] in
 2018. It is also directly based on the paper ["Introducing Bayesian Statistics with M&Ms][mmpaper]
 by Gwen Eadie et al (2019). Because what better way to learn statistics than through chocolate?  
 
-
+[survey]: 
 [mmpaper]: https://www.tandfonline.com/doi/full/10.1080/10691898.2019.1604106
 [bayes2015]: https://github.com/AstroHackWeek/AstroHackWeek2015/tree/master/day4-day5-inference
 [bayes2018]: https://github.com/AstroHackWeek/AstroHackWeek2018/tree/master/day2_bayesian_inference
