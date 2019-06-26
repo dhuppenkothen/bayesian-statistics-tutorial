@@ -166,6 +166,12 @@ article img {
     max-width: 100%;
 }
 
+article img.emoji {
+    display: inline;
+    height: 2em;
+    width: 2em;
+}
+
 article h2 {
   margin: 48px 0 16px;
   border-bottom: solid 1px #eaecef;
