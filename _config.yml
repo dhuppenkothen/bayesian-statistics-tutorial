@@ -9,7 +9,7 @@
 # cp: Carpentries (to use for instructor traning for instance)
 
 # Overall title for pages.
-title: "Data Visualization"
+title: "Bayesian Statistics"
 
 # Life cycle stage of the lesson
 # possible values: "pre-alpha", "alpha", "beta", "stable"
@@ -89,6 +89,9 @@ defaults:
     values:
       root: ..
       layout: page
+
+plugins:
+  - jemoji
 
 # Files and directories that are not to be copied.
 exclude:
