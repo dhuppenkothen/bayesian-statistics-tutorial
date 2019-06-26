@@ -20,7 +20,7 @@ When working with probabilities, we usually use the notation `P(outcome)` to des
 outcome. The "P" stands for "probability of" whatever follows in the round brackets, which should be
 an identifier of whatever outcome you are trying to calculate the probability of. That could be a
 word, like `P(cookies)`, or it could be a variable shorthand for that outcome, say `P(c)`, or
-something else. For fun, here, we're going to use `P(`:cookie:`)`.
+something else. For fun, here, we're going to use :cookie:.
 
 
 
