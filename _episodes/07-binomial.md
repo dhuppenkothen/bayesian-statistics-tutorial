@@ -26,8 +26,10 @@ Let's remind ourselves of Bayes' rule:
 
 We would like to estimate $$\theta$$, the number of blue M&Ms produced at the factory. To do that, we need to 
 figure out the two terms on the right-hand side:
-* the **likelihood**, $$P(D | \theta, M)$$, and
-* the **prior probability**, $$P(\theta | M)$$
+* the **likelihood**, 
+	$$P(D | \theta, M)$$
+* the **prior probability**, 
+	$$P(\theta | M)$$
 
 In this episode, we're going to talk about the likelihood. 
 
