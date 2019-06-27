@@ -33,7 +33,17 @@ some have almonds, and some no nuts at all), and in different colours.
 {: .challenge}
 
 There are a number of different questions you might be able to answer with a bag of M&Ms.
-In this lesson, we will be answering a specific one :
+
+Here's the basic problem we're going to talk about today: You have a bag of M&Ms, and you 
+want to know how many blue ones are in it. Easy, right? You open the bag, and count all the 
+blue ones! But what if you have a [10 pound bag][mmbag] of M&Ms? Counting them all would take 
+you ages, wouldn't it? Or what if you had several bags. The exact number of blue M&Ms as well 
+as the total number of M&Ms in each bag might vary! So really, what we need is a model of the 
+*average* number of blue M&Ms per bag. We don't just need any model, but we need a *statistical* 
+model that describes the number of blue M&Ms we would get out of a bag of M&Ms given some 
+underlying true fraction of blue M&M that were produced at the factory.
+
+So, in short, our research question for today is this: 
 
 > ## Our Research Question
 >
@@ -69,7 +79,7 @@ and the prior, but let's do a little exercise first:
 > > 1. Our data is categorical data: we have two different colours: blue and not-blue, 
 > > and we are measuring the probability of obtaining each category when we draw an 
 > > m&m out of the bag. 
-> > 2. We will record the data in a [table][mmtable] so that we can then continue to 
+> > 2. We will record the data in a [webform][mmform] so that we can then continue to 
 > > use it.
 > > 3. We will be sampling without replacement, that is, once we draw an M&M out of the 
 > > bag, we won't put it back inside.  
@@ -80,11 +90,8 @@ and the prior, but let's do a little exercise first:
 
 
 
-
-
-
-
-[mmtable]: 
+[mmform]: https://forms.gle/eoHwWziWPq2LfPgG9
+[mmbag]: https://www.mymms.com/product/bulk-mms-candy-10-lb.do?sortby=ourPicksAscend&refType=&from=fn&ecList=7&ecCategory=100601
 [dataviz]: http://huppenkothen.org/data-visualization-tutorial/08-types/index.html
 
 {% include links.md %}
