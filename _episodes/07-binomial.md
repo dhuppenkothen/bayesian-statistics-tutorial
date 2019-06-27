@@ -167,6 +167,148 @@ M&Ms in a set of $$N$$ total M&Ms:
 {: .callout}
 
 
+### The Binomial Distribution in Python
+
+It is instructive to take a look at the shape of the binomial distribution for a number of different 
+cases. Let's try and write some code to do that. 
+
+First, we'll need a function that can calculate the binomial distribution:
+
+~~~
+def binomial_distribution( ## ADD PARAMETERS HERE ## ):
+    
+    ## ADD YOUR FUNCTION HERE
+    ## HINT: scipy.special.comb is useful for 
+    ## calculating (n choose k)
+   
+    ## don't forget to include a string that explains the 
+    ## input variables and the output for future users!
+ 
+    return prob
+~~~
+{: .language-python}
+
+> ## Exercise
+>
+> What parameters do you think the function above should take? 
+>
+> Can you fill out the code in the function to return the binomial probability?
+>
+>
+> > ## Solution
+> > 
+> > Here's an implementation of the binomial distribution:
+> > 
+> > ~~~
+> > def binomial_distribution(n, k, q):
+> >     """
+> >     Calculate the probability of $k$ successes out 
+> >     of $n$ trials, given an underlying success rate $q$.
+> >     
+> >     Parameters
+> >     ----------
+> >     n : int
+> >         The total number of trials
+> >         
+> >     k : int
+> >         The number of successful draws out of $n$
+> >         
+> >     q : float, [0,1]
+> >         The success rate
+> >         
+> >     Returns
+> >     -------
+> >     prob : float [0,1]
+> >         The binomial probability of $k$ draws out 
+> >         of $n$ trials
+> >     """
+> >     
+> >     bin_fac = factorial(n)/(factorial(k) * factorial(n-k))
+> >     
+> >     first_prob = q ** k
+> >     second_prob = (1. - q) ** (n - k)
+> >     
+> >     prob = bin_fac * first_prob * second_prob
+> > 
+> >     return prob
+> > ~~~
+> > {: .language-python}
+> > 
+> > **Note**: it would be very time-consuming if we hat to code up all of our 
+> > probability distributions all the time! Thankfully, the helpful open-source
+> > developers working on `scipy` have done this work for us! They `scipy.stats` 
+> > module implements a large range of probability distributions. 
+> > 
+> > For example, we could achieve the same as above:
+> > 
+> > ~~~
+> > import scipy.stats
+> > prob = scipy.stats.binom(n=n, p=q).pmf(k)
+> > ~~~
+> > {: .language-python}
+> > 
+> > Here, `pmf` stands for "probability mass function", which is what probability 
+> > distributions for **discrete outcomes** are called. 
+> > 
+> > {: .output}
+> {: .solution}
+{: .challenge}
+
+
+This function allows us to calculate the probability distribution, also called the **probability mass 
+function** for problems that have discrete outcomes (in our case we can only have *integer* outcomes, i.e. 
+1 blue m&m, or 2 blue m&ms, etc.).
+
+Let's do another exercise:
+
+> ## Plotting the Probability Mass Function
+> 
+> Imagine we have a bag with 55 M&Ms. Our friend, who works at the M&M factory, has told us that 50% of 
+> all M&Ms should be blue. Plot the probability mass function for different values of $$k$$. Which 
+> value of $$k$$ has the largest probability?
+>
+> > ## Solution
+> > 
+> >  Let's write a *loop* that runs through all possibilities, from *no blue M&Ms at all* to 
+> > *every M&M is blue*:
+> > 
+> > ~~~
+> > n = 55 # total number of M&Ms
+> > q = 0.5 # fraction of blue M&Ms at the factory
+> > 
+> > # generate a list of all possible values of k, going 
+> > # from 0 to 55
+> > ktrial = np.arange(0, n, 1) 
+> > 
+> > # make a list of zeros to store the probabilities for 
+> > # each value of k in
+> > prob = np.zeros(n)
+> > 
+> > # loop through all values of k and calculate the binomial probability
+> > # for this case
+> > for i,k in enumerate(ktrial):
+> >     prob[i] = binomial_distribution(n, k, q) 
+> >     
+> > # plot the results
+> > fig, ax = plt.subplots(1, 1, figsize=(6,4))
+> > ax.plot(ktrial, prob, lw=2, color="black")
+> > ax.set_xlabel(r"successes $k$ out of %i trials"%n)
+> > ax.set_ylabel(r"$p(k|N,q)$")
+> > 
+> > plt.tight_layout()
+> > 
+> > ~~~
+> > {: .language-python}
+> >
+> > This is what our output should look like:
+> > ![binomial probability mass function, maximum around 30]({{ page.root }}/fig/binom_pmf.png)
+> >
+> > So you should see somewhere between 25 and 35 in a bag of 55 M&Ms fairly often, 
+> > but extreme values (e.g. only 5 blue M&Ms, or 50 blue M&Ms) very, very rarely.
+> > 
+> > {: .output} 
+> {: .solution}
+{: .challenge} 
 
 
 {% include links.md %}
