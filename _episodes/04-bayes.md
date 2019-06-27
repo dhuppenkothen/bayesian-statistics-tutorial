@@ -173,7 +173,7 @@ This means that if all you're interested in is the relative probability of some 
 probable than a different parameter value $$\theta_2$$, you can ignore the marginal likelihood, which is generally 
 difficult to compute, and just write
 
-$$ P(\theta | D, M) \propto P(D | \theta, M) P(\theta | M) $$   .
+$$P(\theta | D, M) \propto P(D | \theta, M) P(\theta | M)$$
 
 {% include links.md %}
 
