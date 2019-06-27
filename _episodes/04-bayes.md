@@ -52,7 +52,7 @@ will be during the morning, given that catering has just told me that there'll b
 > * $$P($$:croissant: \| :sunrise: $$) $$
 >
 > Can you explain why the two are not the same?
-> Can you think of every-day examples for this, where it is obvious that $$P(A | B) \neq P(B | A)$$?
+> Can you think of every-day examples for where $$P(A | B) \neq P(B | A)$$?
 >
 > > ## Solution
 > > 
